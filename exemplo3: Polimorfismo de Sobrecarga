@@ -1,0 +1,28 @@
+exemplo3
+abstract class Veiculo {
+    public abstract void mover();
+}
+
+class Carro extends Veiculo {
+    @Override
+    public void mover() {
+        System.out.println("O carro está se movendo: Vruum!");
+    }
+}
+
+class Bicicleta extends Veiculo {
+    @Override
+    public void mover() {
+        System.out.println("A bicicleta está se movendo: Pedalando!");
+    }
+}
+
+public class TesteVeiculo {
+    public static void main(String[] args) {
+        Veiculo veiculo = new Carro();
+        veiculo.mover(); // Resultado: O carro está se movendo: Vruum!
+
+        veiculo = new Bicicleta();
+        veiculo.mover(); // Resultado: A bicicleta está se movendo: Pedalando!
+    }
+}
