@@ -1,0 +1,30 @@
+exemplo2
+class Instrumento {
+    public void tocar() {
+        System.out.println("Som genérico do instrumento");
+    }
+}
+
+class Violao extends Instrumento {
+    @Override
+    public void tocar() {
+        System.out.println("Som do violão: Strum Strum");
+    }
+}
+
+class Piano extends Instrumento {
+    @Override
+    public void tocar() {
+        System.out.println("Som do piano: Plim Plim");
+    }
+}
+
+public class TesteSobrescritaInstrumentos {
+    public static void main(String[] args) {
+        Instrumento meuInstrumento = new Violao();
+        meuInstrumento.tocar(); // Resultado: Som do violão: Strum Strum
+
+        meuInstrumento = new Piano();
+        meuInstrumento.tocar(); // Resultado: Som do piano: Plim Plim
+    }
+}
